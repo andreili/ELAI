@@ -1,0 +1,4 @@
+ELAI
+====
+
+Embedded Linux AutoInstaller
