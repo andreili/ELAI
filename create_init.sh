@@ -21,8 +21,8 @@ echo "Select board:
 read -p "Enter #: " board
 
 echo "Creating initial ramdisk..."
-##find ./ramdisk/RAW -print0 | cpio --null -o --format=newc | gzip -9 > ./ramdisk/initramfs.cpio.gz
-##mkimage -A arm -O linux -T ramdisk -n "LFS RootFS" -d ./ramdisk/initramfs.cpio.gz ./ramdisk/initramfs > /dev/null
+find ./ramdisk/RAW -print0 | cpio --null -o --format=newc | gzip -9 > ./ramdisk/initramfs.cpio.gz
+mkimage -A arm -O linux -T ramdisk -n "LFS RootFS" -d ./ramdisk/initramfs.cpio.gz ./ramdisk/initramfs > /dev/null
 
 if [ $drive -eq 1 ]; then
 	echo "Preparing partition image..."
